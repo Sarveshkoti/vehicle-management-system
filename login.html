@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+        body {
+            background: url('https://www.epa.gov/sites/default/files/styles/medium/public/2015-07/mvac.jpg?itok=tZYzLCfp') center/cover no-repeat;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #fff;
+        }
+        button{
+          background: #072251;
+          border-radius: 100px;
+          padding: 10px;
+          box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+          width: 300px;
+          color:#fff;
+        }
+        .main-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: rgba(0, 0, 0, 0.7); 
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            width: 300px;
+        }
+
+        .form-body {
+            margin-bottom: 20px;
+        }
+
+        .title {
+            color: #fff; 
+        }
+
+        .social-login ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .social-login li {
+            flex: 1;
+        }
+
+        .social-login li a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        
+
+        .social-login li a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        
+
+        .the-form label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            color: #fff; 
+        }
+
+        .the-form input {
+            width: 100%;
+            padding: 6px;
+            margin-bottom: 15px;
+            border: 1px solid #fff; 
+            border-radius: 70px;
+            background-color: white(255, 255, 255, 0.3);
+            color: black;
+        }
+
+        .the-form input[type="submit"] {
+            background-color: #072251; 
+            color: white;
+            cursor: pointer;
+        }
+
+        .the-form input[type="submit"]:hover {
+            background-color: #4CAF50; 
+        }
+
+        .form-footer a {
+            color: #fff; 
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            padding: 0px 0px 0px 0px;
+            background-color: #4f55c7;
+            margin: 0px;
+          }
+      
+          .fa {
+            padding: 20px;
+            font-size: 23px;
+            width: 60px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+          }
+      
+          .fa:hover {
+            opacity: 0.5;
+            text-decoration: none;
+          }
+      
+          .fa-facebook {
+            background: white;
+            color: #55ACEE;
+          }
+          .fa-whatsapp {
+            background: #25d366;
+            color: white;
+          }
+      
+          .fa-twitter {
+            background: #55ACEE;
+            color: white;
+          }
+      
+          .fa-instagram {
+            background: #125688;
+            color: white;
+          }
+          .fa-google {
+            background: white;            
+          }
+      
+          p {
+            text-align: center;
+      
+          }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="form-container">
+
+            <div class="form-body">
+                <h2 class="title">Log in to our page</h2>
+                <div class="social-login">
+                    
+                </div>
+
+                
+
+                <form action="index.html" method="GET" class="the-form">
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email">
+
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password">
+
+                           <button type="button" onclick="redirectToindex()">Log In</button>
+
+                </form>
+                <script>
+                  function redirectToindex() {
+                      window.location.href = 'index.html';
+                  }
+              </script>
+            </div>
+            
+            <div class="form-footer">
+                <div>
+                    <span>Don't have an account?</span> <a href="./signup.html">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<footer>
+
+    <p>
+      <a href="https://facebook.com/" class="fa fa-facebook"></a>
+      <a href="https://api.whatsapp.com/send?phone=919572181024&text=Hello%20Sumit.%0d%0aHow%20are%20you%20%3f%0d%0aI%20came%20from%20your%20website.&source=&data=#" class="fa fa-whatsapp"></a>
+      <a href="https://instagram.com/" class="fa fa-instagram"></a>
+      <a href="https://twitter.com/" class="fa fa-twitter"></a>
+      <a href="https://google.com/" class="fa fa-google"></a>
+
+    </p>
+  
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <div style="color:#ffffff;" class="wow fadeInUp footer-copyright">
+            <p>
+              Copyright &copy; 2024 Vehicle Service Management </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</html>
