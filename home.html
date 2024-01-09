@@ -24,8 +24,8 @@
         }
 
         nav {
-                background-color: black;
-                overflow: hidden;
+            background-color: black;
+            overflow: hidden;
         }
 
         nav a {
@@ -54,7 +54,7 @@
         }
 
         .newsletter {
-            background-color: #d38b47;
+            background:linear-gradient(#ecaa6c,#d38b47);
             margin-top: 20px;
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -89,7 +89,7 @@
         }
 
         .card {
-            background-color: #33cc33;
+            background:linear-gradient(#61d861,#33cc33);
             margin-top: 20px;
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -120,8 +120,8 @@
         }
 
         .result-section {
-            background-color: #4CAF50;
-            color: white;
+            background:linear-gradient(#D8B5FF,#1EAE98);
+            color: #fff;
             padding: 20px;
             margin-top: 20px;
             border-radius: 12px;
@@ -177,54 +177,102 @@
             margin: 0;
         }
     </style>
-    </head>
-    <body>
-    <header>
-        <h1>REGISTERED VEHICLE</h1>
-    </header>
-    <nav>
-        <a href="./home.html">Home</a>
-        <a href="./about.html">About</a>
-        <a href="./form.html">Registration Form</a>
-        <a href="./contact.html">Contact</a>
-        <a href="./feedback.html">Feedback Form</a>
-    </nav>
-    <section class="quote-section">
-        <h2>Speed thrills but kills!!!</h2>
-        <p>Don't drink and drive your family is waiting for you.</p>
-        <p class="quote-text">"A dream without ambition is like a car without gas... you're not going anywhere."</p>
-    </section>
-    <section class="card">
-        
-            <p>
-                Vehicle registration holds paramount importance due to its multifaceted role in ensuring road safety, regulatory compliance, and effective traffic management. Firstly, it serves as a primary means of identification for each vehicle, providing a unique and standardized way to distinguish between automobiles. This facilitates easy tracking, verification of ownership, and aids law enforcement agencies in their duties.
+</head>
+<body>
 
-                <br>If you haven't registered your vehicle click the below link to register your vehicle</p>
-                <div class="Registration form">
-                    <p>Haven't registered yet? <a href="./form.html">Registration form</a></p>
-                </div>
-        
-    </section>
-    <section class="newsletter">
-        <h2>Enter vehicle number</h2>
-        <p>Input your vehicle number below to find whether your vehicle is registered or not:</p>
-        <form onsubmit="findvehicleNumber(); return false;">
-            <div class="form-group">
-                <label for="vehicle Number">vehicle Number</label>
-                <input type="text" class="form-control" id="vehicle Number" placeholder="Enter your vehicle number">
-            </div>
-            <button type="submit" class="btn btn-primary">Find vehicle</button>
-        </form>
-    
-        <div id="result-container"></div>
-    </section>
-    <section class="newsletter">
-   
-    </section>
-    
-    <footer>
-        Copyright &copy; 2024 Vehicle Service Management
-    </footer>
-    
-    
-</body> 
+<header>
+    <h1>REGISTERED VEHICLE</h1>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="./about.html">About</a>
+    <a href="./form.html">Registration Form</a>
+    <a href="./contact.html">Contact</a>
+    <a href="./feedback.html">Feedback Form</a>
+</nav>
+
+<section class="quote-section">
+    <h2>Speed thrills but kills!!!</h2>
+    <p>Don't drink and drive; your family is waiting for you.</p>
+    <p class="quote-text">"A dream without ambition is like a car without gas... you're not going anywhere."</p>
+</section>
+
+<section class="card">
+    <p>
+        Vehicle registration holds paramount importance due to its multifaceted role in ensuring road safety, regulatory compliance, and effective traffic management. Firstly, it serves as a primary means of identification for each vehicle, providing a unique and standardized way to distinguish between automobiles. This facilitates easy tracking, verification of ownership, and aids law enforcement agencies in their duties.
+
+        <br>If you haven't registered your vehicle, click the below link to register your vehicle</p>
+    <div class="Registration form">
+        <p>Haven't registered yet? <a href="./form.html">Registration form</a></p>
+    </div>
+</section>
+
+<section class="newsletter">
+    <h2>Enter vehicle number</h2>
+    <p>Input your vehicle number below to find whether your vehicle is registered or not:</p>
+    <form onsubmit="findVehicleDetails(); return false;">
+        <div class="form-group">
+            <label for="VehicleNumber">Vehicle Number</label>
+            <input type="text" class="form-control" id="VehicleNumber" placeholder="Enter your Vehicle number">
+        </div>
+        <button type="submit" class="btn btn-primary">Find Vehicle</button>
+    </form>
+
+    <div id="result-container"></div>
+</section>
+
+<section class="newsletter">
+</section>
+
+<footer>
+    Copyright &copy; 2024 Vehicle Service Management
+</footer>
+
+<script>
+    const vehicleDetails = [
+        { owner_name: 'Sarvesh', vechile_type: 'LMV',number: 'AP 25 AD 5741', registrationDate: '01-01-2023' },
+        { owner_name: 'Harsha', vechile_type: 'MC 50CC (Motorcycle 50cc)',number: 'AP 01 A 1234', registrationDate: '10-04-2004' },
+        { owner_name: 'Santosh Kumar', vechile_type: 'LMV-NT (Land Motor Vehicle—No 4 wheeler Transport)',number: 'AP 25 AN 4466', registrationDate: '21-04-2013' },
+        { owner_name: 'Vinod', vechile_type: 'MC EX50CC (Motorcycle more than 50cc)',number: 'KA 19 EQ 1316', registrationDate: '01-04-2009' },
+        { owner_name: 'Raja Singh', vechile_type: 'MC With Gear or M/CYCL.WG (Motorcycle With Gear)',number: 'KL 07 CP 7325', registrationDate: '13-12-2018' },
+        { owner_name: 'Rahul', vechile_type: 'LMV (Light Motor Vehicle)',number: 'MH 02 VD 2636', registrationDate: '23-11-2017' },
+        { owner_name: 'Rohit Sharma', vechile_type: 'LMV-TR (Light Motor Vehicle—Transport)',number: 'WB 06 F 5977', registrationDate: '26-09-2005' },
+        { owner_name: 'Sachin', vechile_type: 'HMV (Heavy Motor Vehicle)',number: 'UP 14 AC 1417', registrationDate: '10-03-2014' },
+        { owner_name: 'Sri Ram', vechile_type: 'HPMV (Heavy Passenger Motor Vehicle)',number: 'TN 76 AZ 1197', registrationDate: '15-08-2009' },
+        { owner_name: 'Laxman', vechile_type: 'MC 50CC (Motorcycle 50cc)',number: 'HR 26 DQ 5551', registrationDate: '04-08-2007' },
+        ];
+
+    function findVehicleDetails() {
+        const vehicleNumberInput = document.getElementById("VehicleNumber");
+        const vehicleNumber = vehicleNumberInput.value.trim();
+
+        const resultContainer = document.getElementById("result-container");
+        resultContainer.innerHTML = "";
+
+        const result = findVehicleDetailsByNumber(vehicleNumber);
+        if (result) {
+            resultContainer.innerHTML = "<div class='result-section'>" +
+                "<div class='result-title'>Vehicle Details</div>" +
+                "<div class='result-message'><p>Owner name: " + result.owner_name + "</p></div>" +
+                "<div class='result-message'><p>Vechile type: " + result.vechile_type + "</p></div>" +
+                "<div class='result-message'><p>Vechile number: " + result.number + "</p></div>" +
+                "<div class='result-message'><p>Registration Date: " + result.registrationDate + "</p></div>" +
+                "</div>";
+        } else {
+            resultContainer.innerHTML = "<p>No matching vehicle found for the entered number.</p>";
+        }
+
+        vehicleNumberInput.value = "";
+    }
+
+    function findVehicleDetailsByNumber(vehicleNumber) {
+        const sanitizedVehicleNumber = vehicleNumber.toLowerCase();
+        const vehicleDetailsResult = vehicleDetails.find(entry => entry.number.toLowerCase() === sanitizedVehicleNumber);
+        return vehicleDetailsResult;
+    }
+</script>
+
+
+</body>
+</html>
