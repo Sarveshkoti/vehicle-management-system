@@ -125,9 +125,17 @@
         <input type="date" id="registration_date" name="registration_date" required>
         </div>
 
-        <input type="submit" class="btn btn-primary" value="Submit">
-    </form>
-    
+        <button type="button" onclick="redirectTohome(),showSuccessMessage()">Submit</button>    </form>
+        <script>
+            function redirectTohome() {
+                window.location.href = 'home.html';
+            }
+        </script>
+        <script>
+          function showSuccessMessage() {
+              alert("Successfully sent!");
+          }
+      </script>
     <footer>
         Copyright &copy; 2024 Vehicle Service Management
     </footer>
