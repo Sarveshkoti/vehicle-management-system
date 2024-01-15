@@ -3,108 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEHICLE REGISTRATION</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<head>
-<style>
-    body {
-        font-family: 'Arial', sans-serif;
-        background-color: #f4f4f4;
-        color: #333;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-    header {
-        background-color:#39a0ca;
-        font: bolder;
-        color: white;
-        padding: 20px;
-    }
-    nav {
-        background-color: black;
-        overflow: hidden;
-    }
-
-    nav a {
-        display: inline-block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-
-    nav a:hover {
-        background-color: #ddd;
-        color: black;
-    }
-
     
 
-    footer {
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        
+        header {
+            background-color:  #39a0ca;
+            font: bolder;
+            color: white;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: black;
+            overflow: hidden;
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        
+
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .newsletter {
+            background:linear-gradient(#ecaa6c,#d38b47);
+            margin-top: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            align-items: center;
+            
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 2.3em;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background:linear-gradient(#61d861,#33cc33);
+            margin-top: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            align-items: center;
+            
+        }
+    
+        .loading-spinner {
+            display: none;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #33cc33;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            margin: 10px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .feedback-message {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .result-section {
+            background:linear-gradient(#D8B5FF,#1EAE98);
+            color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .result-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .result-message {
+            font-size: 1.2em;
+        }
+
+        .result-details {
+            margin-top: 15px;
+        }
+
+      
+        footer {
         background-color: #000;
         color: white;
         text-align: center;
         padding: 20px;
-        position: fixed;
-        bottom: 0;
         width: 100%;
-    }
-.card {
-    display: flex;
-    align-items: center;
-    background :linear-gradient(rgb(59, 215, 59),rgb(0, 166, 255));
-    margin: 20px;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    flex: 1;
-}
+        }
+        .quote-section {
+            background:linear-gradient(orange,red); 
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
 
-.card img {
-    width: 350px;
-    height: 250px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
+        .quote-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
 
-p {
-    font-size: 1.2em;
-    text-align: justify;
-    text-shadow: #fff;
-}
+        .quote-section p {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+        }
 
-    img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        height: 400px;
-      }
-</style>
+        .quote-text {
+            font-family: 'Verdana', sans-serif;
+            font-size: 2em;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1.5;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>REGISTERED VEHICLE</h1>
-    </header>
-    <nav>
-        <a href="./home">Home</a>
-        <a href="./about.html">About</a>
-        <a href="./form.html">Registration Form</a>
-        <a href="./contact.html">Contact</a>
-        <a href="./feedback.html">Feedback Form</a>
-    </nav>
 
-        <img src="https://img.freepik.com/free-vector/set-different-kind-cars-trucks-isolated-white-background_1308-54940.jpg" alt="Our Team" class="img-fluid">
-<section>
-    <div class="card">
-        <p>Our online platform provides a seamless and efficient way for you to register your vehicle with ease. We understand the importance of a hassle-free registration process, and we strive to make it as convenient as possible for our users.
-Our user-friendly interface allows you to input essential details such as the owner's name, vehicle number, type of vehicle, and registration date. We've incorporated a secure document upload feature, ensuring that you can easily submit necessary documentation for a swift verification process.
-With this website Registered vehicle, you can trust in a robust security system that safeguards your data throughout the registration process. Our payment integration ensures a smooth transaction experience, letting you pay registration fees securely online. Upon successful registration, you'll receive a prompt confirmation and a digital receipt for your records.</p>
-<br>
+<header>
+    <h1>REGISTERED VEHICLE</h1>
+</header>
+
+<nav>
+    <a href="./home.html">Home</a>
+    <a href="./about.html">About</a>
+    <a href="./form.html">Registration Form</a>
+    <a href="./contact.html">Contact</a>
+    <a href="./feedback.html">Feedback Form</a>
+</nav>
+
+<section class="quote-section">
+    <h2>Speed thrills but kills!!!</h2>
+    <p>Don't drink and drive; your family is waiting for you.</p>
+    <p class="quote-text">"A dream without ambition is like a car without gas... you're not going anywhere."</p>
+</section>
+
+<section class="card">
+    <p>
+        Vehicle registration holds paramount importance due to its multifaceted role in ensuring road safety, regulatory compliance, and effective traffic management. Firstly, it serves as a primary means of identification for each vehicle, providing a unique and standardized way to distinguish between automobiles. This facilitates easy tracking, verification of ownership, and aids law enforcement agencies in their duties.
+
+        <br>If you haven't registered your vehicle, click the below link to register your vehicle</p>
+    <div class="Registration form">
+        <p>Haven't registered yet? <a href="./form.html">Registration form</a></p>
     </div>
 </section>
+
+<section class="newsletter">
+    <h2>Enter vehicle number</h2>
+    <p>Input your vehicle number below to find whether your vehicle is registered or not:</p>
+    <form onsubmit="findVehicleDetails(); return false;">
+        <div class="form-group">
+            <label for="VehicleNumber">Vehicle Number</label>
+            <input type="text" class="form-control" id="VehicleNumber" placeholder="Enter your Vehicle number">
+        </div>
+        <button type="submit" class="btn btn-primary">Find Vehicle</button>
+    </form>
+
+    <div id="result-container"></div>
+</section>
+
+<section class="newsletter">
+</section>
+
 <footer>
     Copyright &copy; 2024 Vehicle Service Management
 </footer>
 
+<script>
+    const vehicleDetails = [
+        { owner_name: 'ABC', number: 'AP 23 AB 5678',vehicle_type: 'FVG—Motorcycles', registrationDate: '04-01-2024' },
+        { owner_name: 'Sarvesh', number: 'AP 25 AD 5741',vehicle_type: 'LMV', registrationDate: '01-01-2023' },
+        { owner_name: 'Harsha', number: 'AP 01 A 1234',vehicle_type: 'MC 50CC (Motorcycle 50cc)', registrationDate: '10-04-2004' },
+        { owner_name: 'Santosh Kumar', number: 'AP 25 AN 4466',vehicle_type: 'LMV-NT (Land Motor Vehicle—No 4 wheeler Transport)', registrationDate: '21-04-2013' },
+        { owner_name: 'Vinod', number: 'KA 19 EQ 1316',vehicle_type: 'MC EX50CC (Motorcycle more than 50cc)', registrationDate: '01-04-2009' },
+        { owner_name: 'Raja Singh', number: 'KL 07 CP 7325',vehicle_type: 'MC With Gear or M/CYCL.WG (Motorcycle With Gear)', registrationDate: '13-12-2018' },
+        { owner_name: 'Rahul', number: 'MH 02 VD 2636',vehicle_type: 'LMV (Light Motor Vehicle)', registrationDate: '23-11-2017' },
+        { owner_name: 'Rohit Sharma', number: 'WB 06 F 5977',vehicle_type: 'LMV-TR (Light Motor Vehicle—Transport)', registrationDate: '26-09-2005' },
+        { owner_name: 'Sachin', number: 'UP 14 AC 1417',vehicle_type: 'HMV (Heavy Motor Vehicle)',registrationDate: '10-03-2014' },
+        { owner_name: 'Sri Ram', number: 'TN 76 AZ 1197',vehicle_type: 'HPMV (Heavy Passenger Motor Vehicle)', registrationDate: '15-08-2009' },
+        { owner_name: 'Laxman',number: 'HR 26 DQ 5551', vehicle_type: 'MC 50CC (Motorcycle 50cc)', registrationDate: '04-08-2007' },
+        ];
 
-</body> 
+    function findVehicleDetails() {
+        const vehicleNumberInput = document.getElementById("VehicleNumber");
+        const vehicleNumber = vehicleNumberInput.value.trim();
+
+        const resultContainer = document.getElementById("result-container");
+        resultContainer.innerHTML = "";
+
+        const result = findVehicleDetailsByNumber(vehicleNumber);
+        if (result) {
+            resultContainer.innerHTML = "<div class='result-section'>" +
+                "<div class='result-title'>Vehicle Details</div>" +
+                "<div class='result-message'><p>Owner name: " + result.owner_name + "</p></div>" +
+                "<div class='result-message'><p>Vehicle number: " + result.number + "</p></div>" +
+                "<div class='result-message'><p>Vehicle number: " + result.vehicle_type + "</p></div>" +
+                "<div class='result-message'><p>Registration Date: " + result.registrationDate + "</p></div>" +
+                "</div>";
+        } else {
+            resultContainer.innerHTML = "<p>No matching vehicle found for the entered number. To register click the above link or go through the navigaton bar click Registration Form over there</p>";
+        }
+
+        vehicleNumberInput.value = "";
+    }
+
+    function findVehicleDetailsByNumber(vehicleNumber) {
+        const sanitizedVehicleNumber = vehicleNumber.toLowerCase();
+        const vehicleDetailsResult = vehicleDetails.find(entry => entry.number.toLowerCase() === sanitizedVehicleNumber);
+        return vehicleDetailsResult;
+    }
+</script>
+
+<div id="root"></div>
+
+  <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+
+  <script src="/static/js/bundle.js"></script>
+  <script src="/static/js/0.chunk.js"></script>
+  <script src="/static/js/main.chunk.js"></script>
+
+  <script>
+    const rootElement = document.getElementById('root');
+    ReactDOM.createRoot(rootElement).render(React.createElement(App));
+  </script>
+</body>
+</html>
