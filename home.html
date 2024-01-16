@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VEHICLE REGISTRATION</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    npx create-react-app my-react-app
-cd my-react-app
-npm run build
+    
+
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -17,7 +16,6 @@ npm run build
             padding: 0;
             text-align: center;
         }
-
         
         header {
             background-color:  #39a0ca;
@@ -63,6 +61,7 @@ npm run build
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
             flex: 1;
             align-items: center;
+            
         }
 
         .form-group {
@@ -188,7 +187,7 @@ npm run build
 </header>
 
 <nav>
-    <a href="./home">Home</a>
+    <a href="./home.html">Home</a>
     <a href="./about.html">About</a>
     <a href="./form.html">Registration Form</a>
     <a href="./contact.html">Contact</a>
@@ -197,7 +196,7 @@ npm run build
 
 <section class="quote-section">
     <h2>Speed thrills but kills!!!</h2>
-    <p>Don't drink and drive, your family is counting on you.</p>
+    <p>Don't drink and drive; your family is waiting for you.</p>
     <p class="quote-text">"A dream without ambition is like a car without gas... you're not going anywhere."</p>
 </section>
 
@@ -234,17 +233,17 @@ npm run build
 
 <script>
     const vehicleDetails = [
-        { owner_name: 'Sarvesh', vechile_type: 'LMV',number: 'AP 25 AD 5741', registrationDate: '01-01-2023' },
-        { owner_name: 'ABC', vechile_type: 'FVG—Motorcycles',number: 'AP 23 AB 5678', registrationDate: '04-01-2024' },
-        { owner_name: 'Harsha', vechile_type: 'MC 50CC (Motorcycle 50cc)',number: 'AP 01 A 1234', registrationDate: '10-04-2004' },
-        { owner_name: 'Santosh Kumar', vechile_type: 'LMV-NT (Land Motor Vehicle—No 4 wheeler Transport)',number: 'AP 25 AN 4466', registrationDate: '21-04-2013' },
-        { owner_name: 'Vinod', vechile_type: 'MC EX50CC (Motorcycle more than 50cc)',number: 'KA 19 EQ 1316', registrationDate: '01-04-2009' },
-        { owner_name: 'Raja Singh', vechile_type: 'MC With Gear or M/CYCL.WG (Motorcycle With Gear)',number: 'KL 07 CP 7325', registrationDate: '13-12-2018' },
-        { owner_name: 'Rahul', vechile_type: 'LMV (Light Motor Vehicle)',number: 'MH 02 VD 2636', registrationDate: '23-11-2017' },
-        { owner_name: 'Rohit Sharma', vechile_type: 'LMV-TR (Light Motor Vehicle—Transport)',number: 'WB 06 F 5977', registrationDate: '26-09-2005' },
-        { owner_name: 'Sachin', vechile_type: 'HMV (Heavy Motor Vehicle)',number: 'UP 14 AC 1417', registrationDate: '10-03-2014' },
-        { owner_name: 'Sri Ram', vechile_type: 'HPMV (Heavy Passenger Motor Vehicle)',number: 'TN 76 AZ 1197', registrationDate: '15-08-2009' },
-        { owner_name: 'Laxman', vechile_type: 'MC 50CC (Motorcycle 50cc)',number: 'HR 26 DQ 5551', registrationDate: '04-08-2007' },
+        { owner_name: 'ABC', number: 'AP 23 AB 5678',vehicle_type: 'FVG—Motorcycles', registrationDate: '04-01-2024' },
+        { owner_name: 'Sarvesh', number: 'AP 25 AD 5741',vehicle_type: 'LMV', registrationDate: '01-01-2023' },
+        { owner_name: 'Harsha', number: 'AP 01 A 1234',vehicle_type: 'MC 50CC (Motorcycle 50cc)', registrationDate: '10-04-2004' },
+        { owner_name: 'Santosh Kumar', number: 'AP 25 AN 4466',vehicle_type: 'LMV-NT (Land Motor Vehicle—No 4 wheeler Transport)', registrationDate: '21-04-2013' },
+        { owner_name: 'Vinod', number: 'KA 19 EQ 1316',vehicle_type: 'MC EX50CC (Motorcycle more than 50cc)', registrationDate: '01-04-2009' },
+        { owner_name: 'Raja Singh', number: 'KL 07 CP 7325',vehicle_type: 'MC With Gear or M/CYCL.WG (Motorcycle With Gear)', registrationDate: '13-12-2018' },
+        { owner_name: 'Rahul', number: 'MH 02 VD 2636',vehicle_type: 'LMV (Light Motor Vehicle)', registrationDate: '23-11-2017' },
+        { owner_name: 'Rohit Sharma', number: 'WB 06 F 5977',vehicle_type: 'LMV-TR (Light Motor Vehicle—Transport)', registrationDate: '26-09-2005' },
+        { owner_name: 'Sachin', number: 'UP 14 AC 1417',vehicle_type: 'HMV (Heavy Motor Vehicle)',registrationDate: '10-03-2014' },
+        { owner_name: 'Sri Ram', number: 'TN 76 AZ 1197',vehicle_type: 'HPMV (Heavy Passenger Motor Vehicle)', registrationDate: '15-08-2009' },
+        { owner_name: 'Laxman',number: 'HR 26 DQ 5551', vehicle_type: 'MC 50CC (Motorcycle 50cc)', registrationDate: '04-08-2007' },
         ];
 
     function findVehicleDetails() {
@@ -258,9 +257,9 @@ npm run build
         if (result) {
             resultContainer.innerHTML = "<div class='result-section'>" +
                 "<div class='result-title'>Vehicle Details</div>" +
-                "<div class='result-message'><p>Owner name: " + result.owner_name + "</p></div>" +
-                "<div class='result-message'><p>Vechile type: " + result.vechile_type + "</p></div>" +
-                "<div class='result-message'><p>Vechile number: " + result.number + "</p></div>" +
+                "<div class='result-message'><p>Owner Name: " + result.owner_name + "</p></div>" +
+                "<div class='result-message'><p>Vehicle Number: " + result.number + "</p></div>" +
+                "<div class='result-message'><p>Vehicle Type: " + result.vehicle_type + "</p></div>" +
                 "<div class='result-message'><p>Registration Date: " + result.registrationDate + "</p></div>" +
                 "</div>";
         } else {
